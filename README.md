@@ -1,5 +1,5 @@
 unction myFunction() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('เช็คการมาเรียน')
+  var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('ใส่ชื่อชีต')
   var names = ss.getRange(1, 2,1,ss.getLastColumn()).getValues()[0]
   var check = ss.getRange(ss.getLastRow(), 2,1,ss.getLastColumn()).getValues()[0]
   var std = names.length-1
@@ -22,7 +22,7 @@ unction myFunction() {
 var msg = "📌ประจำวันที่ "+date+year+"\n 🏫 นักเรียนทั้งหมด "+std+" คน \n ✅ มาเรียน "+countCheck+" คน \n 🤒 ป่วย "+countSick+" คน\n ❌ ไม่มาเรียน "+countNo+" คน \n 📊 รายชื่อนักเรียน(ป่วย,ขาดเรียน,ลา) ได้แก่ \n"+result
     sendNotify(msg)
 }  
-var token ="Jd8THXoATHPIzOsCJXIXdR4XgAHVRtjxEVaWMDE5kSg"//โทเคน
+var token ="ใส่token"//โทเคน
 function sendNotify(msg){
 let payloadJson = {
        "message": msg
