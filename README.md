@@ -1,4 +1,4 @@
-unction myFunction() {
+function myFunction() {
   var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('ใส่ชื่อชีต')
   var names = ss.getRange(1, 2,1,ss.getLastColumn()).getValues()[0]
   var check = ss.getRange(ss.getLastRow(), 2,1,ss.getLastColumn()).getValues()[0]
